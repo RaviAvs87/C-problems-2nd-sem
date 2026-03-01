@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<stdbool.h>
+
+bool is_leap_year(int year);
+
+int main(){
+    if(is_leap_year(2000)){
+        printf("2000 is leap year\n");
+    }else {
+        printf("2000 is not leap year\n");
+    }
+    
+    if(is_leap_year(2013)){
+        printf("2013 is leap year\n");
+    }else {
+        printf("2013 is not leap year\n");
+    }
+    
+    if(is_leap_year(2100)){
+        printf("2100 is leap year\n");
+    }else {
+        printf("2100 is not leap year\n");
+    }
+    
+    return 0;
+}
+bool is_leap_year(int year){
+    if(year % 400 ==0) return true;
+    else if(year % 100 == 0) return false;
+    else if(year % 4 == 0) return true;
+    else return false;
+}
